@@ -1,16 +1,17 @@
 let root = document.querySelector("#root");
 
-
 // BASE DE DATOS
 let frutas = ['🍇','🍈','🍉','🍊','🍋','🍌','🍍','🥭','🍎'];
 let frutas2 = ['🍇','🍈','🍉','🍊','🍋','🍌','🍍','🥭','🍎'];
 
+// JUNTAR LAS DOS MATRIZES
 let todas_las_frutas = frutas.concat(frutas2);
 
+// FUNCION PARA HACER QUE LAS CARTAS ESTE EN UNA POSICION ALEATORIA
+todas_las_frutas.sort(function(){return 0.5 - Math.random() });
 
+// FUNCION PARA CREAR LAS CARTAS DE LA MATRIZ
 function agregar_datos_al_DOM(){
-
-
     todas_las_frutas.forEach(function(elemento,indice){
 
         let contenedor = document.createElement("div");
@@ -25,15 +26,11 @@ function agregar_datos_al_DOM(){
         root.appendChild(contenedor);
 
     });
-
 }
 agregar_datos_al_DOM();
 
-
-// FUNCIÓN DE SELECCIÓN
-
+// FUNCIÓN DE VOLTEAR LAS CARTAS
 let datos_del_dom = document.querySelectorAll(".fruta_back");
-let frutas_ = document.querySelector("#fruta");
 
 function activar(){
     this.classList.add("activar");
