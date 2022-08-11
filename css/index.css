@@ -1,0 +1,46 @@
+.fondo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#root {
+    width: 70rem;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.fruta{
+    width: 100%;
+    height: 100%;
+    background-color: #2980B9;
+    font-size: 40px;
+    cursor: pointer;
+
+    transform: rotateY(88.5deg);
+    transition: all 1s;
+    transform-style: preserve-3d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fruta_back{
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    background-color: #2980B9;
+    cursor: pointer;
+}
+.activar{
+    transform: rotateY(180deg);
+    transition: 0.37s;
+}
+.fruta_back:hover{
+    background-color: #85C1E9;
+}
