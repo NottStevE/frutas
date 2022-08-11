@@ -17,7 +17,7 @@ function agregar_datos_al_DOM(){
 
         contenedor.innerHTML = 
         '<div class="fruta_back">' +
-            '<div class="fruta" id="fruta">' +
+            '<div class="fruta_front" id="fruta">' +
                 elemento +
             '</div>' +
         '</div>';
@@ -32,13 +32,12 @@ agregar_datos_al_DOM();
 
 // FUNCIÓN DE SELECCIÓN
 
-let datos_del_dom = document.querySelectorAll(".fruta");
-let frutas_ = document.querySelector("fruta_back");
+let datos_del_dom = document.querySelectorAll(".fruta_back");
+let frutas_ = document.querySelector("#fruta");
 
 function activar(){
     this.classList.add("activar");
 }
-datos_del_dom.forEach(function(elemento, indice){
-    
+datos_del_dom.forEach(function(elemento){
     elemento.addEventListener('click', activar);
-})
+});
